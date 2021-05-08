@@ -1,0 +1,16 @@
+//Comparador mayor que (>) y menor que (<)
+
+const dinero = 300;
+const totalAPagar = 300;
+
+if(dinero >= totalAPagar){
+    console.log("Si podemos pagar");
+}else{
+    console.log("No podemos pagar, fondos insuficientes");
+}
+
+if(dinero <= totalAPagar){
+    console.log("No podemos pagar, fondos insuficientes");
+}else{
+    console.log("Si podemos pagar");
+}
