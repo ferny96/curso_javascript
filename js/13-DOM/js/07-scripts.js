@@ -7,7 +7,10 @@ encabezado.style.textTransform = "uppercase";
 
 //OTRA FORMA DE HACERLO
 let card = document.querySelector(".card");
-//AGREGANDO CLASES
+//AGREGANDO SOLO UNA CLASE
+card.classList.add = ("Nueva-clase");
+
+//AGREGANDO DOS CLASES O PODRIAN SER MAS
 card.classList.add = ("Nueva-clase","Segunda-clase");
 
 // console.log(card.classList);
