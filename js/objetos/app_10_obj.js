@@ -11,11 +11,13 @@ const medidas = {
 }
 
 //Unir los dos OBJETOS
+//PRIMERA FORMA
 const resultado = Object.assign(producto, medidas);
 
 console.log(resultado);
 
 //Spread Operator o Rest Operator
+//SEGUNDA FORMA
 const resultado2 = {...producto, ...medidas}
 
 console.log(resultado2);
