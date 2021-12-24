@@ -3,7 +3,6 @@ for(let i = 0; i < 10 ;i++){
     console.log(`Numero ${i}`);
 }
 
-
 //IDENTIFICAR NUMEROS PARES
 for(let n = 1; n <= 20; n++){
     if( n % 2 == 0){
@@ -12,7 +11,6 @@ for(let n = 1; n <= 20; n++){
         console.log(`El numero ${n} es impar`);
     }
 }
-
 
 const carrito = [
     {nombre: "Monitor 27 pulgadas",precio: 500},

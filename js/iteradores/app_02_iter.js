@@ -1,6 +1,6 @@
 //BREAK Y CONTINUE en un FOR LOOP
-//BREAK: corta la ejecucion de un for loop
-//CONTINUE: intersecta un elemento y continua la ejecucion
+//BREAK: corta la ejecución de un for loop
+//CONTINUE: intersecta un elemento y continua la ejecucion mostrando el resto de elementos
 
 for(let i = 0; i <= 10 ;i++){
 
