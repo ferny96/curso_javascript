@@ -8,13 +8,18 @@ const carrito = [
 ];
 
 /*FILTER: crea un nuevo arreglo con la condicion que estamos realizando, es decir, su resultado
-en el nuevo arreglo sera con los valores encontrados*/
+en el nuevo arreglo sera con los valores encontrados.
+EJEMPLO 1:*/
 let resultado = carrito.filter( (producto) => producto.precio > 400);
 
+//EJEMPLO 2:
 resultado = carrito.filter( (producto) => producto.precio < 600 )
 console.log(resultado);
 
-//REDUCE Y FILTER SON LOS MAS UTILIZADOS
-resultado = carrito.filter((producto) => producto.nombre !== "Audifonos");//SI DESEAMOS NO MOSTRAR UN ELEMENTO
+//REDUCE Y FILTER SON LOS MAS UTILIZADOS, es probable que FILTER lo vaya a utilizar mas
+//SI DESEAMOS NO MOSTRAR UN ELEMENTO:
+resultado = carrito.filter((producto) => producto.nombre !== "Audifonos");
+
+//SI DESEAMOS MOSTRAR SOLO UN ELEMENTO:
 resultado = carrito.filter((producto) => producto.nombre === "Audifonos");
 console.log(resultado);

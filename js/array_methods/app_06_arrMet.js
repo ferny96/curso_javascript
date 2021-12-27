@@ -1,4 +1,6 @@
-//EVERY: todos los elementos de un arreglo deben de cumplir una condicion para retornar un TRUE
+/*Diferencias entre EVERY y SOME>
+EVERY: TODOS los elementos de un arreglo deben de cumplir esa condicion para retornar un TRUE
+SOME: Al menos uno debe de cumplir con la condicion para retornar un TRUE*/
 const carrito = [
     { nombre: "Monitor 27 pulgadas", precio: 500 },
     {nombre:"Television", precio: 100 },

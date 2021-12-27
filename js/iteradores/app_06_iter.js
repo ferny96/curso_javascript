@@ -1,5 +1,12 @@
 //ForEach o .MAP
-//ForEach
+//ForEach: Ideal para recorrer un arreglo
+
+/* Diferencias:
+    Podemos crear una variable y ha esa variable asignarle el resultado de .map,
+    mientras que con .forEach no se imprimira nada.
+*/
+
+//ARREGLO
 const pendientes = ['Tarea', 'Comer', 'Proyecto', 'Estudiar JavaScript'];
 
 pendientes.forEach( (pendiente, indice) => {

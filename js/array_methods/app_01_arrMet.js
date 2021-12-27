@@ -1,3 +1,5 @@
+//Los array methods hacen el trabajo pesado por nosotros
+
 //SOME: que al menos un elemento del arreglo cumpla con la condicion
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 
@@ -8,6 +10,10 @@ meses.forEach((mes) => {
     }
 });
 
+/*Tambien comprueba si existe un valor en un arreglo
+    NOTA: .include funciona con arreglos de un solo indice, para revisar si un objeto existe en un arreglo
+    hay que hacer uso de .some
+*/
 const resultado = meses.includes('Enero');
 console.log(resultado);
 
@@ -20,7 +26,9 @@ const carrito = [{ nombre: "Monitor 27 pulgadas", precio: 500 },
                 {nombre:"Teclado", precio: 400 }
                 ];
 
-const existe = carrito.some( producto => producto.nombre == "Celular");
+//Sin return tambien funciona
+const existe = carrito.some( producto => 
+    producto.nombre == "Celular");
 
 console.log(existe);
 
