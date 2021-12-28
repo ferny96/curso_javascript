@@ -4,7 +4,9 @@ console.log(encabezado);
 
 //COMO ACCEDER AL TEXTO, TRES FORMAS
 //PRIMERA FORMA:
-console.log(encabezado.innerText);//Si en el CSS visibility:hidden: no lo va a encontrar
+/*Si en el CSS tenemos habilitado visibility:hidden; no lo va a
+encontrar, ya que esto hace invisible al texto*/
+console.log(encabezado.innerText);
 
 //SEGUNDA FORMA:
 console.log(encabezado.textContent);//Si lo va a encontrar
@@ -16,6 +18,7 @@ console.log(encabezado.innerHTML);//Se trae el HTML
 const encabezado2 = document.querySelector(".contenido-hero h1").textContent;
 console.log(encabezado2);
 
+//Cambiar el texto aplicando el chaining o encadenamiento
 document.querySelector(".contenido-hero h1").textContent = "Nuevo Heading";
 
 //SELECCIONAR UNA IMAGEN

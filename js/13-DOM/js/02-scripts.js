@@ -1,7 +1,9 @@
 /*Seleccionar elementos por clase de la forma anterior:
 getElementsByClassName: seleccionar elementos por su clase*/
 
-//ES KEY SENSITIVE, si la clase esta es minuscula aqui tambien va en minuscula y si es al contrario igual
+/*ES KEY SENSITIVE, si la clase esta es minuscula aqui tambien va en minuscula
+y si es al contrario igual.
+Todos los selectores inician con document*/
 const header = document.getElementsByClassName("header");
 console.log(header);
 
