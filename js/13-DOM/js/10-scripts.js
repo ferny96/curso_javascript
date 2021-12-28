@@ -1,13 +1,13 @@
 //GENERANDO HTML CON JAVASCRIPT
 
 //EJEMPLO #1
-//PRIMERA FORMA DE HACERLO
+//Primera forma de hacerlo, para la creacion de elementos no es key sensitive
 const enlace = document.createElement('a');
 
-//AGREGANDO EL TEXTO
+//Agregando el texto
 enlace.textContent = "Nuevo enlace";
 
-//ANADIENDO HREF
+//Añadiendo href
 enlace.href = '/nuevo-enlace';
 
 enlace.target = "_blank";
@@ -21,10 +21,10 @@ console.log(enlace);
 //SELECCIONAR LA NAVEGACION
 //.appendChild coloca el enlace al final de la navegacion
 const navegacion = document.querySelector(".navegacion");
-// navegacion.appendChild(enlace);
+//navegacion.appendChild(enlace);
 
 
-//COLOCAR EL ENLACE EN LA POSICION QUE DESEAMOS
+//Colocar el enlace en la posicion que deseamos
 navegacion.insertBefore(enlace, navegacion.children[1]);
 
 function miFuncion(){

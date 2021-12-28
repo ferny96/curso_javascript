@@ -1,12 +1,13 @@
-//ELIMINAR ELEMENTOS DEL DOM
-//ELIMINANDO ELEMENTOS, PRIMERA FORMA
+//ELIMINAR ELEMENTOS DEL DOM, HAY DOS FORMAS
+
+//Primera forma: Eliminando elementos por si mismos
 const primerEnlace = document.querySelector("a");
 console.log(primerEnlace);
 primerEnlace.remove();
 
 
-//ELIMINANDO ELEMENTOS UTILIZANDO UNA REFERENCIA DEL PADRE (el padre elimina al hijo)
-//.removeChild
+/*Segunda forma: Eliminando elementos utilizando una referencia del
+padre (el padre elimina al hijo) con .removeChild*/
 const navegacion = document.querySelector(".navegacion");
 navegacion.removeChild(navegacion.children[2]);
 

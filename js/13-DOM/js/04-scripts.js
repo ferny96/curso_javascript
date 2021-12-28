@@ -1,4 +1,4 @@
-//La nueva forma de seleccionar clases y ids
+//queryselector: La nueva forma de seleccionar clases y ids
 //RETORNA EL PRIMERO QUE ENCUENTRA
 const card = document.querySelector(".card");
 console.log(card);

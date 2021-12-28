@@ -1,11 +1,17 @@
 //TRAVERSING THE DOM: irlo recorriendo
 //CON CHILDREN SE ACCEDE A LOS HIJOS DE LOS ELEMENTOS PADRE
 
-const navegacion = document.querySelector("nav.navegacion");
+const navegacion = document.querySelector(".navegacion");
 
 console.log(navegacion);
-console.log(navegacion.childNodes); //LOS ESPACIOS EN BLANCO SON CONSIDERADOS ELEMENTOS
-console.log(navegacion.children);
+console.log(navegacion.childNodes); //Los espacios en blanco son considerados elementos
+console.log(navegacion.children); //Los espacios en blanco no son considerados elementos
+
+//Seleccionar el primer elemento de la navegación
+console.log(navegacion.firstElementChild);
+
+//Seleccionar el último elemento de la navegación
+console.log(navegacion.lastElementChild);
 
 const card = document.querySelector(".card");
 
@@ -17,11 +23,15 @@ card.children[0].src = '../img/hacer3.jpg';
 
 console.log(card.children[0]);
 
-//TRAVERSING THE HIJO AL PADRE: recorrer los hijos hasta llegar al padre
-//ES RECOMENDADO UTILIZAR .parentElement y no .parentNode
+//TRAVERSING DE HIJO AL PADRE: recorrer los hijos hasta llegar al padre
+/*ES RECOMENDADO UTILIZAR .parentElement y no .parentNode (por lo de
+los espacios en blanco)*/
 console.log(card.parentElement);
 
-//TRAVERSING THE hermano a hermano
+//Varios
+console.log(card.parentElement.parentElement.parentElement);
+
+//TRAVERSING de hermano a hermano
 console.log(card.nextElementSibling);
 console.log(card.nextElementSibling.nextElementSibling);
 
@@ -31,9 +41,3 @@ console.log(ultimoCard);
 
 console.log(ultimoCard.previousElementSibling);
 console.log(ultimoCard.previousElementSibling.previousElementSibling);
-
-//SELECCIONAR UN PRIMER ELEMENTO DE UNA NAVEGACION (NAV)
-console.log(navegacion.firstElementChild);
-
-//SELECCIONAR EL ULTIMO ELEMENTO DE UNA NAVEGACION (NAV)
-console.log(navegacion.lastElementChild);
