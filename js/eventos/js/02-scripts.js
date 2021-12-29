@@ -1,19 +1,19 @@
-//EVENTOS CON EL MOUSE
+//Eventos con el MOUSE
 const nav = document.querySelector(".navegacion");
 
-//REGISTRAR UN EVENTO
+//Registrar un evento
 nav.addEventListener('click', () => {
     console.log("Clic en nav");
 });
 
-//mouseenter
+//mouseenter: Cuando posicionamos el puntero en la navegacion
 nav.addEventListener('mouseenter', () => {
     console.log("Entrando a la navegacion");
 
     nav.style.backgroundColor = "white";
 });
 
-//mouseout: cuando sacamos el punto del area
+//mouseout: cuando sacamos el puntero del area
 nav.addEventListener('mouseout', () => {
     console.log("Saliendo de la navegacion");
 
@@ -30,7 +30,7 @@ nav.addEventListener('mouseup', () => {
     console.log("Entrando a la navegacion");
 });
 
-//dblclick: double click
+//dblclick: doble click
 nav.addEventListener('dblclick', () => {
     console.log("Diste doble clic");
 });

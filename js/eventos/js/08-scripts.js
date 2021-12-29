@@ -1,4 +1,4 @@
-//PREVENIR EVENT BUBBLING CON UN METODO
+//Prevenir event bubbling con un metodo
 const parrafo1 = document.createElement('p');
 parrafo1.textContent = "Concierto";
 parrafo1.classList.add("categoria","concierto")
@@ -10,11 +10,13 @@ parrafo2.classList.add("titulo");
 const parrafo3 = document.createElement('p');
 parrafo3.textContent = "$800 por persona";
 parrafo3.classList.add("precio");
+
+/*tambien podria ser con un array function*/
 parrafo3.onclick = function(){
     nuevaFuncion(1);
 }
 
-//CREAR DIV CON LA CLASE DE INFO
+//Crear div con la clase info
 const info = document.createElement("div");
 info.classList.add('info');
 

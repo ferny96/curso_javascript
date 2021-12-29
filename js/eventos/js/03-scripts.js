@@ -12,7 +12,9 @@ busqueda.addEventListener("keyup", () => {
     console.log('Soltaste la tecla');
 })
 
-//HAY QUE ENTRAR Y SALIRSE DE UN OBJETO O ELEMENTO PARA QUE SE EJECUTE
+/*blur: para validacion de formularios
+hay que entrar y salrse de un objeto o  elemento para
+que se ejecute la funcion*/
 busqueda.addEventListener("blur", () => {
     console.log('Ejecutando blur');
 })
@@ -32,7 +34,7 @@ busqueda.addEventListener("cut", () => {
     console.log('Cortaste');
 })
 
-//ES LA COMBINACION DE TODO LO ANTERIOR (menos el blur)
+//Es la combinacion de todo lo anterior (menos el blur)
 busqueda.addEventListener("input", (e) => {
     if(e.target.value === ''){
         console.log("Fallo la validacion")
