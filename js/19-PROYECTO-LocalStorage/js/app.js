@@ -12,7 +12,11 @@ function eventListeners(){
 
     /*Cuando el documento esta listo*/
     document.addEventListener('DOMContentLoaded', () => {
-        tweets = JSON.parse(localStorage.getItem('tweets'));
+        /*Este codigo lo que hace es lo siguiente:
+        esta parte: JSON.parse(localStorage.getItem('tweets')) busca los
+        tweets en localStorage para convertirlos en JSON.parse pero si lo
+        marca como null entonces que cree un arreglo vacio con []*/
+        tweets = JSON.parse(localStorage.getItem('tweets')) || [];
     });
 }
 
@@ -36,7 +40,7 @@ function agregarTweet(e){
     /*NOTA: 'texto: tweet' seria igual a utilizat solo tweet (sin texto:)*/
     const tweetObj = {
         id: Date.now(),
-        texto: tweet
+        tweet
     }
 
     /*Anadir al arreglo de tweets*/
@@ -72,13 +76,28 @@ function crearHTML(){
 
     limpiarHTML();
 
+    /*NOTA: length no es un metodo de null al igual forEach por lo cual se muestra
+    un error, para ello en los eventLinsteners se hara la solucion con JSON.parse*/
     if(tweets.length > 0){
         tweets.forEach(tweet => {
+            /*Agregar un boton de eliminar*/
+            const btnEliminar = document.createElement('a');
+            btnEliminar.classList.add('borrar-tweet');
+            btnEliminar.innerText = 'X';
+
+            /*Anadir la funcion de eliminar*/
+            btnEliminar.onclick = () => {
+                borrarTweet(tweet.id);
+            }
+ 
             //Crear el HTML
             const li = document.createElement('li');
 
             //anadir el texto
-            li.innerHTML = tweet.tweet;
+            li.innerText = tweet.tweet;
+
+            /*Asignar el boton*/
+            li.appendChild(btnEliminar);
 
             //Insertarlo en el HTML
             listaTweets.appendChild(li);
@@ -93,11 +112,16 @@ function sincronizarStorage(){
     localStorage.setItem('tweets', JSON.stringify(tweets))
 }
 
+/*Eliminar un tweet*/
+function borrarTweet(id){
+    tweets = tweets.filter(tweet => tweet.id !== id);
+
+    crearHTML();
+}
+
 /*Limpiar el HTML*/
 function limpiarHTML(){
     while(listaTweets.firstChild){
         listaTweets.removeChild(listaTweets.firstChild);
     }
 }
-
-/*NOTA: me quede en el capitulo 148 minuto 4:12*/

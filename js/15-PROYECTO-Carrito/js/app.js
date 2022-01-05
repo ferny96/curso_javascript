@@ -15,6 +15,16 @@ function cargarEventListeners(){
     //Elimina cursos del carrito
     carrito.addEventListener("click", eliminarCurso);
 
+    /*Muestra en el carrito las compras*/
+    document.addEventListener('DOMContentLoaded', () => {
+        /*Si el usuario no ha agregado nada al carrito marcara un null por eso
+        hay que agregar la parte de '|| []' que es un arreglo vacio*/
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
+    
+    });
+
     /*Vaciar el carrito
     NOTA: Cuando es poco codigo lo recomendable es hacerlo de esta manera con funcion anonima
     y cuando es mucho codigo hacerlo de la forma como lo tenemos arriba*/
@@ -45,7 +55,8 @@ function eliminarCurso(e){
         //Elimina del arreglo de articulosCarrito por el data-id
         articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
 
-        carritoHTML(); //Iterar sobre el carrito y mostrar su HTML
+        /*Iterar sobre el carrito y mostrar su HTML*/
+        carritoHTML();
     }
 }
 
@@ -123,6 +134,14 @@ function carritoHTML(){
         contenedorCarrito.appendChild(row);
     });
 
+    /*Sincronizacion con el localStorage*/
+    sincronizarStorage();
+
+}
+
+/*Anadiendo localStorage al carrito de compras*/
+function sincronizarStorage(){
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 //Limpiar HTML
@@ -140,7 +159,3 @@ function limpiarHTML(){
     el while dejara de ejecutarse, entonces este codigo hace que mi app sea mas
     rapida*/
 }
-
-
-
-
